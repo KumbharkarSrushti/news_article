@@ -1,12 +1,10 @@
-import Grid from "./action.js";
+import NewsList from "./action.js";
 
 const Home =()=>{
   return(
-    <>
-      <div>
-          <Grid/>
-      </div>
-    </>
+      <>
+          <NewsList/>
+      </>
   )
 };
 

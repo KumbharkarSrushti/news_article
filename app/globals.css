@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -17,33 +23,42 @@
 }
 
 .box1,
-.box2,
-.box3 {
+.box2 {
   width: 100%;
 }
 
-.box1{
-  height:30px;
-  /* border: 1px solid black; */
-}
 
-.box2{
+.box1{
   border-bottom: 1px solid black;
   height:140px;
   justify-content: center;
   line-height: 140%;
   margin-bottom: 4px;
+  margin-top: 30px;
+}
+h2{ 
+  font-family: "Iowan Old Style", serif;
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 118px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.box3{
+.IMGNEWS{
+  height:200px;
+  width:400px;
+}
+
+
+.box2{
   border-top: 1px solid black;
   height:180px;
+  padding: 5px;
 }
 .form-control {
   width: 250px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 20px;
 }
 
@@ -51,9 +66,7 @@
   width: 50px;
   height: 50px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin-top:20px;
 }
 
 .row {
@@ -72,24 +85,110 @@
   height: 200px;
 }
 
-@media (min-width: 1300px) {
-  .container {
-    max-width: 1280px;
-  }
-}
 
-.img{
-  height:118px;
-  width:351px;
-}
-
-.newrow{
+/* .newrow{
   /* border:1px solid black; */
-  height:25px;
+  /* height:25px;
   width: 1280px;
   margin:auto;
   color:red;
   font-size: 20px;
   margin-bottom:40px;
-  padding:10px; 
+  padding:10px;  */
+/* } */ 
+
+.newrow {
+  height: 25px;
+  width: 100%; 
+  margin-bottom: 40px;
+  padding: 10px;
+  color: red;
+  font-size: 20px;
 }
+
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+}
+
+.test {
+  width: 60px;
+  height: 60px;
+  background-color: #E84848;
+  margin-top: 25px;
+}
+
+.title{
+  font-size:25px;
+}
+
+
+
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%; 
+  }
+
+  /* Boxes */
+  .box {
+    height: auto; 
+    margin-bottom: 10px; 
+  }
+
+  .form-control {
+    width: 100%; 
+  }
+
+  .btn {
+    width: 100%; 
+  }
+
+  .row {
+    display: block; 
+  }
+
+  .col-4 {
+    flex: none; 
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .newrow {
+    width: 100%; 
+    margin: auto;
+    font-size: 16px; 
+    margin-bottom: 10px; 
+  }
+
+  .search-container {
+    justify-content: center; 
+  }
+
+  .test {
+    width: 30px;
+    height: 30px; 
+    margin-top: 10px; 
+  }
+
+  h2 {
+    font-size: 36px; 
+    line-height: 48px;
+  }
+
+  .IMGNEWS {
+    height: auto;
+    width: 100%; 
+  }
+
+  .title {
+    font-size: 18px; 
+  }
+}
+
