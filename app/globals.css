@@ -4,6 +4,47 @@
   box-sizing: border-box;
 }
 
+.container-fluid{
+  padding:0px;
+}
+
+.box1{
+  border-bottom: 1px solid black;
+  height:140px;
+  justify-content: center;
+  line-height: 140%;
+  margin-bottom: 4px;
+  margin-top: 30px;
+  display: flex;
+  
+}
+.row.box1 > * {
+  width: auto;
+}
+.red{
+  width: 60.291px;
+  height: 60.291px;
+  margin-top:30px;
+  margin-left:-16px;
+  margin-right:-16px;
+}
+
+h2{ 
+  font-family: "Iowan Old Style", serif;
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 118px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+input{
+  height: 56px;
+  width:60px;
+}
+
+
+/*This is for Grid */
 @media (min-width: 1300px) {
   .container {
     max-width: 1280px;
@@ -15,34 +56,10 @@
   margin: 0 auto;
   /* border: 1px solid black; */
 }
-
 .box {
   /* border: 1px solid black; */
   height: 550px;
   margin-bottom: 20px;
-}
-
-.box1,
-.box2 {
-  width: 100%;
-}
-
-
-.box1{
-  border-bottom: 1px solid black;
-  height:140px;
-  justify-content: center;
-  line-height: 140%;
-  margin-bottom: 4px;
-  margin-top: 30px;
-}
-h2{ 
-  font-family: "Iowan Old Style", serif;
-  font-size: 84px;
-  font-weight: 400;
-  line-height: 118px;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .IMGNEWS{
@@ -50,29 +67,6 @@ h2{
   width:400px;
 }
 
-
-.box2{
-  border-top: 1px solid black;
-  height:180px;
-  padding: 5px;
-}
-.form-control {
-  width: 250px;
-  height: 50px;
-  margin-top: 20px;
-}
-
-.btn {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin-top:20px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .col-4 {
   flex: 0 0 33.33%;
@@ -85,44 +79,10 @@ h2{
   height: 200px;
 }
 
-
-/* .newrow{
-  /* border:1px solid black; */
-  /* height:25px;
-  width: 1280px;
-  margin:auto;
-  color:red;
-  font-size: 20px;
-  margin-bottom:40px;
-  padding:10px;  */
-/* } */ 
-
-.newrow {
-  height: 25px;
-  width: 100%; 
-  margin-bottom: 40px;
-  padding: 10px;
-  color: red;
-  font-size: 20px;
+h1{
+  font-size:30px;
 }
 
-
-
-.search-container {
-  display: flex;
-  justify-content: center;
-}
-
-.search-form {
-  display: flex;
-}
-
-.test {
-  width: 60px;
-  height: 60px;
-  background-color: #E84848;
-  margin-top: 25px;
-}
 
 .title{
   font-size:25px;
@@ -136,7 +96,6 @@ h2{
     max-width: 100%; 
   }
 
-  /* Boxes */
   .box {
     height: auto; 
     margin-bottom: 10px; 

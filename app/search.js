@@ -2,13 +2,10 @@ import React from 'react';
 
 const Search = () => {
   return (
-<div className="search-container">
-    <form  className="search-form">
-      <input type="text" className="form-control" id="query" name="query" placeholder="Search..." />
-      <button type="submit" className="btn btn-danger">Go</button>
-    </form>
-</div>
-
+    <div class="row">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+    </div>
   );
 }
 
