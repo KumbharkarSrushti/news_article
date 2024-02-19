@@ -1,26 +1,23 @@
 import React from 'react';
-import  Search from "./search.js"
-const Header = () => {
-    return (
-      <>
-        <div class="container-fluid">
-          <div class="row box1">
-            <h2>NewsAPI</h2>
-            <img class='red' src="/Ellipse 1.png"></img>
-            <h2>Org</h2>
-          </div>
-          <Search />
+import Search from "./search.js"
+
+function Header() {
+  return (
+    <div className="container-fluid">
+      <div className="row justify-content-center">
+        <div className='text-center header'>
+          <span>NewsAPI</span>
+          <img src="/Ellipse 1.png" alt="Image 1" className="img-fluid mb-4" />
+          <span>Org</span>
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-                <p>TOP NEWS FROM INDIA</p>
-            </div>
+      </div>  
+      <div className="row justify-content-center">
+          <div className='text-center search_box'>
+            <Search/>
           </div>
-        </div>
-      </>
-    );
-  }
-  
-  export default Header;
-  
+      </div>
+    </div>
+  );
+}
+
+export default Header;
