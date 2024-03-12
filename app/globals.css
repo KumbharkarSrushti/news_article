@@ -1,5 +1,8 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-
+@media screen and (min-width:1300px) {
+  .container {
+    max-width: 940px; 
+  }
+}
 
 .header{
   font-family: "Iowan Old Style";
@@ -25,7 +28,6 @@ h2{
   font-weight: 400;
 }
 
-
 input{
   width: 267px;
   height: 60px;
@@ -33,44 +35,48 @@ input{
   background-repeat: no-repeat;
   background-position: left;
   padding: 8px 0px 8px 35px;
+  border:1px solid black;
+  outline: none;
+  color:#3C3030;
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 button{
   background-color:#E84848;
   height: 60px;
   width:60px;
+  border:none;
+  color:#FDFDFA;
+  font-family: "Iowan Old Style";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 139%;
 }
-
-@media (min-width: 1300px) {
-  .container {
-    max-width: 910px;
-    margin-bottom: 89px;
-  }
-}
-
 
 .box {
-  /* border: 1px solid black; */
-  /* height:388px; */
   margin-bottom:80px;
   padding:20px;
 }
 
 
-h1{
+.head{
   font-family: "Inknut Antiqua";
   font-size: 18px;
   font-weight: 600;
+  line-height: 120%; 
+  letter-spacing: -0.72px;
   margin-top:10px;
 }
 
 .IMGNEWS{
-  width: 250px;
-  height: 120px;
+  width: 100%;
 }
 
-p{
-  font-family: Inter;
+.para{
+  font-family: 'Inter';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -82,4 +88,54 @@ p{
   font-size: 20px;
   font-weight: 400;
   padding-left:5px;
+}
+
+
+
+.footer{
+  border-top:1px solid black;
+  height: 120px;
+  align-items: center;
+  padding:50px;
+}
+
+.footerLogo{
+  width: 8.302px;
+  height: 8.302px;
+  margin:0px 2px 5px 2px;
+}
+
+.footertext{
+  font-family: "Inria Serif";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+}
+
+.org{
+  padding-right:2px;
+}
+
+.arrow{
+  padding-left:6px;
+}
+
+
+
+
+@media screen and (max-width: 414px) {
+  .container {
+    max-width: 100%; 
+  }
+
+  .header {
+    font-family: "Iowan Old Style";
+    font-size: 42px;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+    margin-top: 15px; 
+    padding-bottom: 15px;
+    margin-bottom: 3px; 
+  }
 }
