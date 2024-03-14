@@ -1,4 +1,4 @@
-import NewsItem from "./ArticleColumn";
+import NewsItem from "./NewsItem.js";
 import articles from "./data";
 
 const Grid = () => {
