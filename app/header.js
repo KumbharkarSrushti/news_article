@@ -1,5 +1,4 @@
 import React from 'react';
-import Search from "./search.js"
 
 function Header() {
   return (
@@ -11,11 +10,6 @@ function Header() {
           <span>Org</span>
         </div>
       </div>  
-      <div className="row justify-content-center">
-          <div className='text-center search_box'>
-            <Search/>
-          </div>
-      </div>
     </div>
   );
 }

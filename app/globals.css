@@ -138,6 +138,11 @@ button{
     padding-bottom: 15px;
     margin-bottom: 3px; 
   }
+  .img-fluid{
+  width: 25.809px;
+  height: 25.809px;
+  margin-top:8px;
+  }
 }
 
 .read_article{

@@ -1,20 +1,38 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, {useState } from 'react';
 
-const Search = () => {
-  useEffect(() => {
-    const fetchData = () => {
-      fetch("https://newsapi.org/v2/everything?q=apple&from=2024-02-08&to=2024-02-08&sortBy=popularity&apiKey=4ec780570c234ab1a4bf02f7fec5516a")
-        .then(response => response.json())
-        .then(data => console.log(data.articles))
+const Search = ({ onSearch }) => {
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearch = () => {
+    fetch(`https://newsapi.org/v2/everything?q=${searchInput}&apiKey=4ec780570c234ab1a4bf02f7fec5516a`)
+      .then(response => response.json())
+      .then((json) => {
+        onSearch(json.articles); 
+        console.log(json)
+      })
     };
 
-    fetchData();
-  }, []);
+
   return (
     <>
-      <input type="search" class="searchbar" placeholder="Search" aria-label="Search" />
-      <button type="button">GO</button>
+    <div className="row justify-content-center">
+      <div className='text-center search_box'>
+      <input 
+        type="search" 
+        className="searchbar" 
+        placeholder="Search" 
+        aria-label="Search" 
+        value={searchInput} 
+        onChange={(e) => setSearchInput(e.target.value)} 
+      />
+      
+      <button 
+        type="button" 
+        onClick={handleSearch}>
+        GO</button>
+        </div>
+    </div>
     </>
   );
 }
