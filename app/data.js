@@ -1,4 +1,4 @@
-const news_articles=[
+const initial_articles=[
       {
         id:0,
         title: "Echoes of Defeat: A Personal Reflection on India’s 2023 World Cup Loss",
@@ -73,4 +73,46 @@ const news_articles=[
       },
     ];
 
-export default news_articles;
+export default initial_articles;
+
+
+
+
+
+// import { useEffect, useState } from "react";
+
+// class Top_Headlines {
+//   constructor(urlToImage, title, description, url) {
+//     this.urlToImage = urlToImage;  
+//     this.title = title;
+//     this.description = description;
+//     this.url = url;
+//   }
+// }
+
+// const initial_articles = () => {
+//   const [headlines, setHeadlines] = useState([]);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const response = await fetch("https://newsapi.org/v2/top-headlines?country=IN&category=business&apiKey=4ec780570c234ab1a4bf02f7fec5516a");
+//       const data = await response.json();
+//       const fetchedArticles = [];
+//       data.articles.forEach(articleData => {
+//         const article = new Top_Headlines(articleData.urlToImage, articleData.title, articleData.description, articleData.url);
+//         fetchedArticles.push(article);
+//       });
+//       setHeadlines(fetchedArticles);
+//     };
+
+//     fetchData();
+//   }, []);
+
+//   return (
+//     <div>
+      
+//     </div>
+//   );
+// };
+
+// export default initial_articles;
