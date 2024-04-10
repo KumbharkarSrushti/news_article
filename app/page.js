@@ -1,10 +1,11 @@
 "use client"
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Header from "./header.js";
 import Search from "./search.js";
 import Grid from "./grid.js";
 import Footer from "./footer.js";
-import initial_articles from "./data.js";
+import TopHeadlines from "./data.js";
+
 
 class Article {
   constructor(urlToImage, title, description, url) {
@@ -16,8 +17,11 @@ class Article {
 };
 
 const Home =()=>{
-  const [articles, setArticles] = useState(initial_articles);
+  const [articles, setArticles] = useState([]);
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
+  
+  
   const onSearch = (search_articles) => {
     const new_articles = [];
     let count = 0;
@@ -29,13 +33,22 @@ const Home =()=>{
       }
     });
     setArticles(new_articles);
+    setShowSearchResults(true);
   };
+
+  let content;
+  if (showSearchResults) {
+    content = <Grid articles={articles} />;
+  } else {
+    content = <TopHeadlines />;
+  }
+
 
   return (
     <>
       <Header />
       <Search onSearch={onSearch} />
-      <Grid articles={articles} />
+      {content}
       <Footer />
     </>
   );
