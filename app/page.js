@@ -4,8 +4,7 @@ import Header from "./header.js";
 import Search from "./search.js";
 import Grid from "./grid.js";
 import Footer from "./footer.js";
-import TopHeadlines from "./data.js";
-
+// import TopHeadlines from "./data.js";
 
 class Article {
   constructor(urlToImage, title, description, url) {
@@ -18,9 +17,17 @@ class Article {
 
 const Home =()=>{
   const [articles, setArticles] = useState([]);
-  const [showSearchResults, setShowSearchResults] = useState(false);
-
   
+  useEffect(() => {
+    const fetchTopHeadlines = () => {
+      fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4ec780570c234ab1a4bf02f7fec5516a`)
+        .then(response => response.json())
+        .then((data) => {
+          onSearch(data.articles);
+        })
+    };
+    fetchTopHeadlines();
+  }, []);
   
   const onSearch = (search_articles) => {
     const new_articles = [];
@@ -33,22 +40,13 @@ const Home =()=>{
       }
     });
     setArticles(new_articles);
-    setShowSearchResults(true);
   };
-
-  let content;
-  if (showSearchResults) {
-    content = <Grid articles={articles} />;
-  } else {
-    content = <TopHeadlines />;
-  }
-
 
   return (
     <>
       <Header />
       <Search onSearch={onSearch} />
-      {content}
+      <Grid articles={articles}/>
       <Footer />
     </>
   );
